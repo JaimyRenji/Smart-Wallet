@@ -19,7 +19,7 @@ export const SmartWallet = () => {
         </div>
         <div className="categorylogo">
           <div className="icons">
-            <img src={house} alt="" />
+          <a href="/formdata"><img src={house} alt="" /></a>
             <img src={car} alt="" />
           </div>
           <div className="icons">
