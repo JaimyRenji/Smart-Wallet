@@ -1,66 +1,76 @@
-import React from 'react';
-
-function SmartWallet() {
+import React from "react";
+import "./dashboard.css";
+import logo from "../../images/logo.png";
+import petcare from "../../images/petcare.png";
+import car from "../../images/car.png";
+import computer from "../../images/computer.png";
+import education from "../../images/education.png";
+import food from "../../images/food.png";
+import health from "../../images/health.png";
+import house from "../../images/house.png";
+import shopping from "../../images/shopping.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSackDollar } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRightArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faIndianRupeeSign} from "@fortawesome/free-solid-svg-icons";
+export const SmartWallet = () => {
   return (
     <div className="whole">
-      <div className="category">
-        <div className="logo">
-          <img src="./Mask group.png" height="34px" width="249px" alt="Logo" />
+        <div className="category">
+            <div className="logo">
+                <img src={logo} height="34px" width="249px" alt="Logo" />
+            </div>
+            <div className="categorylogo">
+                <div className="icons">
+                    <img src={house} alt="" />
+                    <img src={car} alt="" />
+                </div>
+                <div className="icons">
+                    <img src={education} alt="" />
+                    <img src={health} alt="" />
+                </div>
+                <div className="icons">
+                    <img src={food} alt="" />
+                    <img src={shopping} alt="" />
+                </div>
+                <div className="icons">
+                    <img src={computer} alt="" />
+                    <img src={petcare} alt="" />
+                </div>
+            </div>
         </div>
-        <div className="categorylogo">
-          <div className="icons">
-            <img src="./Group 160.png" alt="" />
-            <img src="./Group 156.png" alt="" />
-          </div>
-          <div className="icons">
-            <img src="./Group 159.png" alt="" />
-            <img src="./Group 155.png" alt="" />
-          </div>
-          <div className="icons">
-            <img src="./Group 158.png" alt="" />
-            <img src="./Group 154.png" alt="" />
-          </div>
-          <div className="icons">
-            <img src="./Group 157.png" alt="" />
-            <img src="./Group 153.png" alt="" />
-          </div>
+        <div className="containers">
+            <div className="header">
+                <h2 className="left_align">Dashboard</h2>
+                <div className="profile">
+                <p className="person">Welcome John!</p>
+                <img className="person-pic"src={house}/>
+                </div>
+            </div>
+        <div className="budget">
+            <h4>YOUR BUDGET SUMMARY</h4>
         </div>
-      </div>
-      <div className="containers">
-        <div className="summary">
-          <div className="heading">
-            <div>
-              <h2>Dashboard</h2>
-              <h4>YOUR BUDGET SUMMARY</h4>
+        <div className="total">
+                <div className="box">
+                    <h4><FontAwesomeIcon icon={faSackDollar} /> Total Income</h4>
+                    <p><b>INR 0.00/-</b></p>
+                </div>
+                <div className="box">
+                    <h4><FontAwesomeIcon icon={faArrowRightArrowLeft}/> Total Expense</h4>
+                    <p><b>INR 0.00/-</b></p>
+                </div>
+                <div className="box">
+                    <h4><FontAwesomeIcon icon={faIndianRupeeSign}/> Balance</h4>
+                    <p><b>INR 0.00/-</b></p>
+                </div>
+        </div>
+        <div className="big">
+            <div className="text-main">
+            <div className="text"><p>Expense <b>INR 2300 </b>than last month</p></div>
+            <div className="text"><p>Savings <b>INR 2510 </b> than last month</p></div>
             </div>
-            <div className="person">
-              <p>Welcome John</p>
-            </div>
-          </div>
-          <div className="total">
-            <div className="box">
-              <h5>Total Income</h5>
-              <p>INR 0.00/-</p>
-            </div>
-            <div className="box">
-              <h5>Total Expense</h5>
-              <p>INR 0.00/-</p>
-            </div>
-            <div className="box">
-              <h5>Balance</h5>
-              <p>INR 0.00/-</p>
-            </div>
-          </div>
-        </div>
-        <div className="visualrep">
-          <div>hello</div>
-          <div></div>
-          <div className="graph"></div>
-          <div className="calendar"></div>
-        </div>
-      </div>
     </div>
-  );
-}
-
-export default SmartWallet;
+      </div>
+      </div>
+          )
+          }
