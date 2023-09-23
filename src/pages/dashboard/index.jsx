@@ -1,6 +1,8 @@
-import React from 'react';
+import React from "react";
+import "./dashboard.css";
+import "../../images/Mask group.png";
 
-function SmartWallet() {
+export const SmartWallet = () => {
   return (
     <div className="whole">
       <div className="category">
@@ -61,6 +63,6 @@ function SmartWallet() {
       </div>
     </div>
   );
-}
+};
 
-export default SmartWallet;
+
