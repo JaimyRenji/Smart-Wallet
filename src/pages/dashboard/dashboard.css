@@ -10,7 +10,7 @@
     display: flex;
   }
   .category{
-    background-color: rgb(206, 109, 184);
+    background-color: rgba(206, 169, 184, 1);
     color: rgb(107, 24, 119);
     position: left;
     width: 329px;
@@ -100,12 +100,12 @@
     flex-direction: column;
     justify-content: space-around;
     margin-top: 10px;
-    /*height:500px;
-    width:250px;*/
+    
   }
 
   .logo{
     padding-top: 20px;
+
   }
 .big{
     background-color: #efd9ce;
