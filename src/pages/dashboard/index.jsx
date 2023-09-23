@@ -53,7 +53,7 @@ function SmartWallet() {
           </div>
         </div>
         <div className="visualrep">
-          <div>hello</div>
+          <div>hello world</div>
           <div></div>
           <div className="graph"></div>
           <div className="calendar"></div>
