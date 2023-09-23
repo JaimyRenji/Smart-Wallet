@@ -1,28 +1,38 @@
-import React from 'react';
+import React from "react";
+import "./dashboard.css";
+import logo from "../../images/logo.png";
+import petcare from "../../images/petcare.png";
+import car from "../../images/car.png";
+import computer from "../../images/computer.png";
+import education from "../../images/education.png";
+import food from "../../images/food.png";
+import health from "../../images/health.png";
+import house from "../../images/house.png";
+import shopping from "../../images/shopping.png";
 
-function SmartWallet() {
+export const SmartWallet = () => {
   return (
     <div className="whole">
       <div className="category">
         <div className="logo">
-          <img src="./Mask group.png" height="34px" width="249px" alt="Logo" />
+          <img src={logo} height="34px" width="249px" alt="Logo" />
         </div>
         <div className="categorylogo">
           <div className="icons">
-            <img src="./Group 160.png" alt="" />
-            <img src="./Group 156.png" alt="" />
+          <a href="/formdata"><img src={house} alt="" /></a>
+            <img src={car} alt="" />
           </div>
           <div className="icons">
-            <img src="./Group 159.png" alt="" />
-            <img src="./Group 155.png" alt="" />
+            <img src={education} alt="" />
+            <img src={health} alt="" />
           </div>
           <div className="icons">
-            <img src="./Group 158.png" alt="" />
-            <img src="./Group 154.png" alt="" />
+            <img src={food} alt="" />
+            <img src={shopping} alt="" />
           </div>
           <div className="icons">
-            <img src="./Group 157.png" alt="" />
-            <img src="./Group 153.png" alt="" />
+            <img src={computer} alt="" />
+            <img src={petcare} alt="" />
           </div>
         </div>
       </div>
@@ -61,6 +71,6 @@ function SmartWallet() {
       </div>
     </div>
   );
-}
+};
 
-export default SmartWallet;
+

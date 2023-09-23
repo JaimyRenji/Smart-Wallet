@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins' );
+body{
+    background-color: white;
+}
+
+.log{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: #18181B;
+  text-decoration: none;
+}
+.logoh{
+padding:16px;
+padding-top:20px;
+height:30px;
+float:left;
+}
+.hero-cont{
+    margin: 25px;
+    padding:16px;
+    width:1300px;
+}
+.hero-left{
+    flex: 1;
+    text-align: left;
+    margin-left: 0px;
+}
+ h1{
+    font-family: "poppins";
+    font-size: 50px;
+    color:purple;
+    font-weight: lighter;
+}
+
+.hero-cont{
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin: 100px 80px;
+    align-items: center;
+    height: 100%;
+}
+.hero-right{
+    flex:1;
+}
+.heroh{
+    padding-top: 0px;
+    float:right;
+    width:500px;
+    border-radius: 20px;
+}
+.join-button {
+    width:200px;
+    height:40px;
+    margin-top: 20px; /* Add spacing between h1 and the button */
+    font-size: 18px; /* Adjust button font size as needed */
+    padding: 10px 20px; /* Adjust button padding as needed */
+    background-color: purple; /* Button background color */
+    color: white; /* Button text color */
+    font-weight:bold;
+    border: none; /* Remove button border */
+    border-radius: 9px; /* Add some rounded corners */
+    cursor: pointer;
+    padding-left: 30px;
+}
