@@ -5,6 +5,7 @@ import { Auth } from "./pages/auth/index";
 import { SmartWallet } from "./pages/dashboard/index";
 import { Landing } from "./pages/landing";
 import { FormData } from "./pages/formdata/index";
+import { FormDataExpense } from "./pages/formdataincome";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/auth" exact element={<Auth />} />
           <Route path="/smartwallet" element={<SmartWallet />} />
           <Route path="/formdata" element={<FormData />} />
+          <Route path="/formdataexpense" element={<FormDataExpense />} />
         </Routes>
       </Router>
     </div>

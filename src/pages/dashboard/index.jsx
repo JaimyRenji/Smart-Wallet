@@ -20,11 +20,10 @@ import {
   faArrowRightArrowLeft,
   faIndianRupeeSign,
 } from "@fortawesome/free-solid-svg-icons";
-import { db } from "../../config/firebase-config"; 
-import { auth } from "../../config/firebase-config"; 
+import { db } from "../../config/firebase-config";
+import { auth } from "../../config/firebase-config";
 
-
-export const SmartWallet = () => {
+export const SmartWallet = ({ location }) => {
   const { addTransaction } = useAddTransaction();
   const { transactions, transactionTotals } = useGetTransactions();
   const { name, profilePhoto } = useGetUserInfo();
@@ -33,7 +32,8 @@ export const SmartWallet = () => {
   const [description, setDescription] = useState("");
   const [transactionAmount, setTransactionAmount] = useState(0);
   const [transactionType, setTransactionType] = useState("expense");
-
+  /* const [selectedDate, setSelectedDate] = useState(null); */
+  /*  const [selectedDate,setSelectDate] = location.state ? location.state.selectedDate : null; */
   const { balance, income, expenses } = transactionTotals;
 
   const onSubmit = (e) => {
@@ -43,7 +43,7 @@ export const SmartWallet = () => {
       transactionAmount,
       transactionType,
     });
-
+    /*  setSelectedDate(date); */
     setDescription("");
     setTransactionAmount("");
   };
@@ -57,114 +57,143 @@ export const SmartWallet = () => {
       console.error(err);
     }
   };
-
+  /* const handleDateChange = (date) => {
+    setSelectedDate(date);
+  }; */
   return (
     <>
-    <div className="whole">
-      <div className="category">
-        <div className="logo">
-          <img src={logo} height="34px" width="249px" alt="Logo" />
-        </div>
-        <div className="categorylogo">
-          <div className="icons">
-            <a href="/formdata">
-              <img src={house} alt="" />
-            </a>
-            <img src={car} alt="" />
+      <div className="whole">
+        <div className="category">
+          <div className="logo">
+            <img src={logo} height="34px" width="249px" alt="Logo" />
           </div>
-          <div className="icons">
-            <img src={education} alt="" />
-            <img src={health} alt="" />
-          </div>
-          <div className="icons">
-            <img src={food} alt="" />
-            <img src={shopping} alt="" />
-          </div>
-          <div className="icons">
-            <img src={computer} alt="" />
-            <img src={petcare} alt="" />
-          </div>
-        </div>
-      </div>
-      <div className="containers">
-        <div className="header">
-          <h2 className="left_align">Dashboard</h2>
-          <div className="profile">
-            <p className="person">Welcome {name}!</p>
-           <img className="profile-photo" src={profilePhoto} />
-          </div>
-        </div>
-        <div className="budget">
-          <h4>YOUR BUDGET SUMMARY</h4>
-        </div>
-        <div className="total">
-          <div className="box">
-            <h4>
-              <FontAwesomeIcon icon={faSackDollar} /> Total Income
-            </h4>
-            <p>
-              <b>INR {income}/-</b>
-            </p>
-          </div>
-          <div className="box">
-            <h4>
-              <FontAwesomeIcon icon={faArrowRightArrowLeft} /> Total Expense
-            </h4>
-            <p>
-              <b>INR {expenses}/-</b>
-            </p>
-          </div>
-          <div className="box">
-            <h4>
-              <FontAwesomeIcon icon={faIndianRupeeSign} /> Balance
-            </h4>
-            <p>
-              <b>INR {balance}/-</b>
-            </p>
+          <div className="categorylogo">
+            <div className="icons">
+              <a href="/formdata">
+                <img src={house} alt="" />
+              </a>
+              <a href="/formdata">
+                <img src={car} alt="" />
+              </a>
+            </div>
+            <div className="icons">
+              <a href="/formdata">
+                <img src={education} alt="" />
+              </a>
+              <a href="/formdata">
+                <img src={health} alt="" />
+              </a>
+            </div>
+            <div className="icons">
+              <a href="/formdata">
+                <img src={food} alt="" />
+              </a>
+              <a href="/formdata">
+                {" "}
+                <img src={shopping} alt="" />
+              </a>
+            </div>
+            <div className="icons">
+              <a href="/formdata">
+                <img src={computer} alt="" />
+              </a>
+              <a href="/formdataexpense">
+                <img src={petcare} alt="" />
+              </a>
+            </div>
           </div>
         </div>
-        <div className="big">
-          <div className="text-main">
-            <div className="text">
+        <div className="containers">
+          <div className="header">
+            <h2 className="left_align">Dashboard</h2>
+            <div className="profile">
+              <p className="person">Welcome {name}!</p>
+              <img className="profile-photo" src={profilePhoto} />
+            </div>
+          </div>
+          <div className="budget">
+            <h4>YOUR BUDGET SUMMARY</h4>
+          </div>
+          <div className="total">
+            <div className="box">
+              <h4>
+                <FontAwesomeIcon icon={faSackDollar} /> Total Income
+              </h4>
               <p>
-                Expense <b>INR 2300 </b>than last month
+                <b>INR {income}/-</b>
               </p>
             </div>
-            <div className="text">
+            <div className="box">
+              <h4>
+                <FontAwesomeIcon icon={faArrowRightArrowLeft} /> Total Expense
+              </h4>
               <p>
-                Savings <b>INR 2510 </b> than last month
+                <b>INR {expenses}/-</b>
               </p>
-              <div className="scroll">
-              <h3> Transactions</h3>
-        <ul>
-          {transactions.map((transaction) => {
-            const { description, transactionAmount, transactionType } =
-              transaction;
-            return (
-              <li>
-                <h4> {description} </h4>
+            </div>
+            <div className="box">
+              <h4>
+                <FontAwesomeIcon icon={faIndianRupeeSign} /> Balance
+              </h4>
+              <p>
+                <b>INR {balance}/-</b>
+              </p>
+            </div>
+          </div>
+          <div className="big">
+            <div className="text-main">
+              <div className="text">
                 <p>
-                  ${transactionAmount} •{" "}
-                  <label
-                    style={{
-                      color: transactionType === "expense" ? "red" : "green",
-                    }}
-                  >
-                    {" "}
-                    {transactionType}{" "}
-                  </label>
+                  Expense <b>INR 2300 </b>than last month
                 </p>
-              </li>
-            );
-          })}
-        </ul>
+              </div>
+              <div className="text">
+                <p>
+                  Savings <b>INR 2510 </b> than last month
+                </p>
+                <div className="scroll">
+                  <h3> Transactions</h3>
+                  <ul>
+                    {transactions.map((transaction) => {
+                      const {
+                        description,
+                        transactionAmount,
+                        transactionType,
+                      } = transaction;
+                      return (
+                        <li>
+                          <h4> {description} </h4>
+                          <p></p>
+                          <p>
+                            ${transactionAmount} •{" "}
+                            <label
+                              style={{
+                                color:
+                                  transactionType === "expense"
+                                    ? "red"
+                                    : "green",
+                              }}
+                            >
+                              {" "}
+                              {transactionType}{" "}
+                              {/* <p>Date: {selectedDate ? selectedDate.toDateString() : 'No date selected'}</p> */}
+                            </label>
+                          </p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-      <div className="expense-tracker">
+    </>
+  );
+};
+{
+  /* <div className="expense-tracker">
         <div className="container">
           <h1> {name}'s Expense Tracker</h1>
           <div className="balance">
@@ -253,11 +282,8 @@ export const SmartWallet = () => {
       </div>
     </>
   );
-};
-
-
-
-
+}; */
+}
 
 /* import React, { useEffect, useState } from "react";
 import "./dashboard.css";
@@ -393,13 +419,9 @@ export const SmartWallet = () => {
       </div>
     </div>
   );
-} */;
+} */
 
-
-
-
-
- /* import React,{ useEffect, useState } from "react";
+/* import React,{ useEffect, useState } from "react";
 import "./dashboard.css";
 import logo from "../../images/logo.png";
 import petcare from "../../images/petcare.png";

@@ -9,7 +9,7 @@ import { useGetTransactions } from "../../hooks/useGetTransactions";
 import { useAddTransaction } from "../../hooks/useAddTransactions";
 import health from "../../images/health.png";
 
-export const FormData = () => {
+export const FormDataExpense = () => {
   const navigate = useNavigate(); 
   const { transactions, transactionTotals } = useGetTransactions();
   const [transactionAmount, setTransactionAmount] = useState(0);
@@ -25,7 +25,8 @@ export const FormData = () => {
     addTransaction({
       description,
       transactionAmount,
-      transactionType:"expense",
+      transactionType:"income",
+
     });
 
     setDescription("");
@@ -49,15 +50,15 @@ export const FormData = () => {
         
           <img src={bg2} alt="bg2" className="top-left-image" />
           <div className="heading">
-            <h1>Expense Form</h1>
+            <h1> Form</h1>
           </div>
           <form className="add-transaction" onSubmit={(e) => { onSubmit(e); handleSubmit(e); }}>
             <div>
             <a href="/smartwallet" className="closebtn">
           <img src={health} alt=""></img>
         </a>
-              <label for="expense-amount" className="exp">
-                Expense Amount{" "}
+              <label for="income-amount" className="inc">
+                Income Amount{" "}
               </label>
               <input
                 type="number"
@@ -66,7 +67,7 @@ export const FormData = () => {
                 required
                 onChange={(e) => setTransactionAmount(e.target.value)}
               />
-              <label for="description" className="exp">
+              <label for="description" className="inc">
                 Description{" "}
               </label>
               <input
