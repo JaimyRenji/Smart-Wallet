@@ -40,9 +40,7 @@ export const Auth = () => {
             <b>Sign up with Google</b>
           </p>
         </button>
-        
       </div>
-      
       <footer>
         <img src={wavefooter} alt=""></img>
       </footer>

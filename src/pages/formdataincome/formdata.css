@@ -11,9 +11,7 @@
   .top-left-image {
     position: absolute;
     top:10px;
-
     left: 10px; 
- 
     z-index: 1; 
   }
   
@@ -22,7 +20,6 @@
     position: absolute;
     bottom: 10px; 
     right: 10px;
-
     z-index: 1; 
   }
   
@@ -41,7 +38,6 @@
 }
 
 .heading{
- 
     align-items: center;
     justify-content: center;
     margin-left: 550px;
@@ -78,80 +74,3 @@
   margin-top: 40px;
   margin-left: 3.5px;
 }
-
-
-
-
-
-
-
-/* 
-@import url('https://fonts.googleapis.com/css?family=Poppins' );
-.container {
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: 720px;
-  }
-  
-  
-
-  .bottom-right-image {
-    position: absolute;
-    bottom: 10px; 
-    right: 10px; 
- 
-    z-index: 1; 
-  }
-  
-.add-transaction{
-    background-color: rgba(206, 169, 184, 1);
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    height: 200px;
-    margin-left: -480px;
-    margin-top: 250px;
-    border-radius: 16px;
-}
-
-.heading{
- 
-    align-items: center;
-    justify-content: center;
-    margin-left: 550px;
-    margin-right: 100px;
-    margin-bottom: 600px;
-}
-
-.sub{
-    margin-top: 20px;
-    background-color: rgba(107, 24, 119, 1);
-    color:white;
-    font-weight: 600;
-    border-radius: 6px;
-    border: none;
-    height: 30px;
-    width: 70px;
-}
-  
-
-.exp{
-    margin-bottom: 10px;
-    font-family: 'Poppins';
-    color: rgba(107, 24, 119, 1);
-    font-weight: 600;
-}
-
-.inc{
-    font-family: 'Poppins';
-    color: rgba(107, 24, 119, 1);
-    font-weight: 600;
-}
-
-.closebtn{
-  margin-top: 50px;
-} */

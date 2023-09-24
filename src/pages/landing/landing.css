@@ -58,14 +58,14 @@ float:left;
 .join-button {
     width:200px;
     height:40px;
-    margin-top: 20px; /* Add spacing between h1 and the button */
-    font-size: 18px; /* Adjust button font size as needed */
-    padding: 10px 20px; /* Adjust button padding as needed */
-    background-color: purple; /* Button background color */
-    color: white; /* Button text color */
+    margin-top: 20px; 
+    font-size: 18px; 
+    padding: 10px 20px;
+    background-color: purple; 
+    color: white; 
     font-weight:bold;
-    border: none; /* Remove button border */
-    border-radius: 9px; /* Add some rounded corners */
+    border: none; 
+    border-radius: 9px; 
     cursor: pointer;
     padding-left: 30px;
 }

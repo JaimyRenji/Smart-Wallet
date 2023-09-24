@@ -40,7 +40,7 @@ export const FormData = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/smartwallet", { state: { selectedDate } }); // Pass selectedDate as state
+    navigate("/smartwallet", { state: { selectedDate } });
   };
 
   return (
