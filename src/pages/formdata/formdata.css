@@ -7,23 +7,23 @@
     height: 720px;
   }
   
-  /* Top-left image style */
+
   .top-left-image {
     position: absolute;
     top:10px;
-    /* Adjust the top position as needed */
-    left: 10px; /* Adjust the left position as needed */
-     /* Set a maximum width for the image */
-    z-index: 1; /* Optional: Use z-index to control the stacking order */
+
+    left: 10px; 
+ 
+    z-index: 1; 
   }
   
-  /* Bottom-right image style */
+  
   .bottom-right-image {
     position: absolute;
-    bottom: 10px; /* Adjust the bottom position as needed */
-    right: 10px; /* Adjust the right position as needed */
- /* Set a maximum width for the image */
-    z-index: 1; /* Optional: Use z-index to control the stacking order */
+    bottom: 10px; 
+    right: 10px;
+
+    z-index: 1; 
   }
   
 .add-transaction{
@@ -75,5 +75,7 @@
 }
 
 .closebtn{
-  margin-top: 50px;
+  margin-top: 40px;
+
 }
+

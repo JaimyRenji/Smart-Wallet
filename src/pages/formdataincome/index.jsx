@@ -7,7 +7,7 @@ import bg1 from "../../images/bg1.png";
 import bg2 from "../../images/bg2.png";
 import { useGetTransactions } from "../../hooks/useGetTransactions";
 import { useAddTransaction } from "../../hooks/useAddTransactions";
-import health from "../../images/health.png";
+import close from "../../images/close.png";
 
 export const FormDataExpense = () => {
   const navigate = useNavigate(); 
@@ -50,12 +50,12 @@ export const FormDataExpense = () => {
         
           <img src={bg2} alt="bg2" className="top-left-image" />
           <div className="heading">
-            <h1> Form</h1>
+            <h1>Income Form</h1>
           </div>
           <form className="add-transaction" onSubmit={(e) => { onSubmit(e); handleSubmit(e); }}>
             <div>
             <a href="/smartwallet" className="closebtn">
-          <img src={health} alt=""></img>
+          <img src={close} alt=""></img>
         </a>
               <label for="income-amount" className="inc">
                 Income Amount{" "}
@@ -80,7 +80,7 @@ export const FormDataExpense = () => {
             </div>
             <div>
               <label htmlFor="expense-date" className="inc">
-                Expenditure Date{" "}
+               Income Date{" "}
               </label>
               <DatePicker
                 id="expense-date"

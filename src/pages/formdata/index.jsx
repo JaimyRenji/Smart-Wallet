@@ -7,7 +7,8 @@ import bg1 from "../../images/bg1.png";
 import bg2 from "../../images/bg2.png";
 import { useGetTransactions } from "../../hooks/useGetTransactions";
 import { useAddTransaction } from "../../hooks/useAddTransactions";
-import health from "../../images/health.png";
+import close from "../../images/close.png";
+
 
 export const FormData = () => {
   const navigate = useNavigate(); 
@@ -54,7 +55,7 @@ export const FormData = () => {
           <form className="add-transaction" onSubmit={(e) => { onSubmit(e); handleSubmit(e); }}>
             <div>
             <a href="/smartwallet" className="closebtn">
-          <img src={health} alt=""></img>
+          <img src={close} alt=""></img>
         </a>
               <label for="expense-amount" className="exp">
                 Expense Amount{" "}
@@ -95,7 +96,9 @@ export const FormData = () => {
 
           <img src={bg1} alt="bg1" className="bottom-right-image" />
         </div>
-      </div>
+       
+      </div> 
+  
     </body>
   );
 };

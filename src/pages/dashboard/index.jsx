@@ -14,6 +14,8 @@ import food from "../../images/food.png";
 import health from "../../images/health.png";
 import house from "../../images/house.png";
 import shopping from "../../images/shopping.png";
+import add from "../../images/add.png";
+import graphpic from "../../images/graphpic.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSackDollar,
@@ -95,11 +97,9 @@ export const SmartWallet = ({ location }) => {
             </div>
             <div className="icons">
               <a href="/formdata">
-                <img src={computer} alt="" />
-              </a>
-              <a href="/formdataexpense">
-                <img src={petcare} alt="" />
-              </a>
+                <img src={computer} alt="" /></a>
+                <a href="/formdata"><img src={petcare} alt="" /></a>
+              
             </div>
           </div>
         </div>
@@ -123,6 +123,9 @@ export const SmartWallet = ({ location }) => {
                 <b>INR {income}/-</b>
               </p>
             </div>
+            <a href="./formdataexpense"><div className="pluslogo">
+              <img src={add} />
+            </div></a>
             <div className="box">
               <h4>
                 <FontAwesomeIcon icon={faArrowRightArrowLeft} /> Total Expense
@@ -151,6 +154,11 @@ export const SmartWallet = ({ location }) => {
                 <p>
                   Savings <b>INR 2510 </b> than last month
                 </p>
+                <div className="bottompart">
+                <div className="graph">
+                <img src={graphpic} alt="" />
+                </div>
+                <div className="transactiontext">
                 <div className="scroll">
                   <h3> Transactions</h3>
                   <ul>
@@ -163,9 +171,8 @@ export const SmartWallet = ({ location }) => {
                       return (
                         <li>
                           <h4> {description} </h4>
-                          <p></p>
                           <p>
-                            ${transactionAmount} •{" "}
+                            INR {transactionAmount} •{" "}
                             <label
                               style={{
                                 color:
@@ -183,7 +190,7 @@ export const SmartWallet = ({ location }) => {
                       );
                     })}
                   </ul>
-                </div>
+                </div></div></div>
               </div>
             </div>
           </div>
@@ -285,7 +292,8 @@ export const SmartWallet = ({ location }) => {
 }; */
 }
 
-/* import React, { useEffect, useState } from "react";
+{
+  /* /* import React, { useEffect, useState } from "react";
 import "./dashboard.css";
 import logo from "../../images/logo.png";
 import petcare from "../../images/petcare.png";
@@ -420,8 +428,7 @@ export const SmartWallet = () => {
     </div>
   );
 } */
-
-/* import React,{ useEffect, useState } from "react";
+  /* import React,{ useEffect, useState } from "react";
 import "./dashboard.css";
 import logo from "../../images/logo.png";
 import petcare from "../../images/petcare.png";
@@ -525,3 +532,4 @@ export const SmartWallet = () => {
 };
 
  */
+}
